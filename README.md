@@ -18,7 +18,8 @@ You will need a few programs if you want to use this turtorial correctly.
     
   # The start of your code
   now its finally time to code the discord bot. All we will be doing to start off will be nothing fancy, just how to make your bot say pong when you say !ping. so first, make a folder on your desktop called whatever you want your bot to be called. next open up cmd or powershell in that positon (shift right click, open cmd/powershell here) and type "npm init --save" (without quotes). Hit enter through it all (endless you want to change any of it). This will download the package.json file that you need to run. next, keep your terminal open and type "npm install discord.js --save" to install the discord.js package. this will do 2 things. 1,  it makes a node_modules folder where all the packages you install go. And it might make a package-lock.json (you can leave this alone). Now, make 2 files. 1 called "index.js" and one called "config.json". open up the config.json with your editor and copy this code to it - 
-```{
+```
+{
 	"token": "",
 	"prefix": ""
 }```
