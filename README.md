@@ -14,4 +14,7 @@ You will need a few programs if you want to use this turtorial correctly.
   
   # Creating your application
     
-   So lets jump right in! First you need to go to [the discord developers website](https://discordapp.com/developers/applications/me) and create a new application. ![here](https://imgur.com/epehNrD) 
+   So lets jump right in! First you need to go to [the discord developers website](https://discordapp.com/developers/applications/me) and create a new application. Now, name your application and give it a wonderful description to help you know what it will do. Finally hit that create app button! Thats not it though, that was too easy.scroll down til you find the button called create a bot user. accept all of it asks of you it wants.  
+    
+  # The start of your code
+  now its finally time to code the discord bot.
