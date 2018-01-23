@@ -24,8 +24,44 @@ You will need a few programs if you want to use this turtorial correctly.
 	"prefix": ""
 }
 ```
-Now, in the empty "" on the token line, add your bot token. You can find your bot token by going back to the discord developer page, find the token feild, click the click to reveal spot, and copy that whole token and paste it in the "" of the config.json file. this means that every time you refer to config.token (config as the json file name and token as that field within the file) it will display your token. so your token line should look like this: ``` "token": "6qi1NzExYLIJuTYUzhDQy.DUgCFg",``` (im not putting a real token in). now in then prefix side of things, in the quotes put whatever prefix you want it to be ```Ex. !```. Now you can close that and get to editing the index file (where the actual code will be).
+Now, in the empty "" on the token line, add your bot token. You can find your bot token by going back to the discord developer page, find the token feild, click the click to reveal spot, and copy that whole token and paste it in the "" of the config.json file. this means that every time you refer to config.token (config as the json file name and token as that field within the file) it will display your token. so your token line should look like this: 
+```
+"token": "6qi1NzExYLIJuTYUzhDQy.DUgCFg",
+``` 
+(im not putting a real token in). now in then prefix side of things, in the quotes put whatever prefix you want it to be (Ex. !). Now you can close that and get to editing the index file (where the actual code will be).
 	
    # The Index.js file
 	
-Now that your configuration settings are complete we will attempt to make a command that will say pong when you say !ping (or whatever prefix you set it as)
+Now that your configuration settings are complete we will attempt to make a command that will say pong when you say !ping (or whatever prefix you set it as). Open your editor for index.js and at the top add
+```
+const Discord = require("discord.js");
+const client = new Discord.Client();
+```
+This will define and allow you to use discord.js and connect to there API. Now, we want to be able to let the bot log in. to do that we will add a line of code at the very bottem of all of our code (this is how most people do it). paste this line into your code and make sure it stays at the bottom.
+```
+client.login(config.json)
+```
+There is 1 probem, right now the json file cannot be read because we diden't define it. Add this line of code so the bot knows where to look:
+```
+const config = require('./config.json')
+```
+There. now the bot will be able to find the bot token and it will log in sucseccfully. Your code should look just about like this:
+```
+const Discord = require("discord.js");
+const client = new Discord.Client();
+consg config = require("./config.json")
+
+client.login(config.json)
+```
+# First command
+Now that we set up our index file to login correctly, let's make our first command! we do this by using the client.on function. to make a command, add this bit of code in between the defining section and the client.login:
+```
+client.on("message", (message) => {
+  if (message.content.startsWith(`${config.prefix}ping)) {
+    message.channel.send("pong!");
+  }
+});
+```
+what this is basicly saying is that if anyone says prefix + pong (!pong) it will send a message saying ping!
+# The end!
+Thats it for this turtorial! I hope you enjoyed and this help you learn a thing or 2 about discord.js, or node in general. This is my first turtorial so if i messed up anything let me know!
