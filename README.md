@@ -1,16 +1,16 @@
-# Bot-Turtorial
+# Bot-Tutorial
 How to start making your own discord bot in discord.js  
   
   
   # So, you want to learn how to make a discord bot, great!
-  I remember when i first started off and it was stressful. Hopefully this guide will help you get pointed in the right direction to becoming the greatest bot developer of all time! 
+  I remember when I first started off and it was stressful. Hopefully this guide will help you get pointed in the right direction to becoming the greatest bot developer of all time! 
      
   #  What is needed before I start?
-You will need a few programs if you want to use this turtorial correctly.
+You will need a few programs if you want to use this tutorial correctly.
   
-  1. [Nodejs](http://link.url/) - Nodejs is a powerful tool that basicly takes your javascript code and converts it into a runable aplication on your computer.
-  2. [npm](http://link.url/) - npm is a packaging software that will (in this case) download the nodes you need to connect to the discord API. (This comes with Nodejs)
- 3. Some sort of text editor, just don't use notepad! use a program made to code in like [Atom](http://link.url/) or [Sublime](http://link.url/)
+  1. [Nodejs](http://nodejs.org) - Nodejs is a powerful tool that basically takes your javascript code and converts it into a runable aplication on your computer.
+  2. [npm](http://npmjs.com) - npm is a packaging software that will (in this case) download the nodes you need to connect to the discord API. (This comes with Nodejs)
+ 3. Some sort of text editor, just don't use notepad! use a program made to code in like [Atom](http://atom.io) or [Sublime](http://sublimetext.com)
   
   # Creating your application
     
@@ -63,5 +63,12 @@ client.on("message", (message) => {
 });
 ```
 what this is basicly saying is that if anyone says prefix + pong (!pong) it will send a message saying ping!
+	
+# Inviting the bot
+so now that we coded the discord bot we need to invite it to a server! to do that go to [Discords permission calculator](https://discordapi.com/permissions.html#0) and at the bottom, post your bots id (shown on discord developers page) in the client id field. Then click the link field and it should bring you to your invite page. From there, you can select what server you want your bot in. select one and click the big blue button and accept the captcha.
+	
+# Turning bot on
+Now the bot dosent run itself, you need to be able to keep your console window open. If you have a server and know what to do already, then go ahead and skip this part, but for the rest of us we need to run it on our own computer. To do that open up the command prompt in the same place as we have had it through this whole turtorial, and type "node ." If that dosen't work then try "node index.js" If this is still coming out as errors then something is wrong with your code and you will have to debug to try and find whats wrong. Post the error your getting in the issues tab and I will do ym best to fix the problem. Now if no errors poped up, then your bot was turned on correctly. go to the server you invited your bot into and look at it run! try out the command you added by doing !ping and it should say pong! 
+	
 # The end!
 Thats it for this turtorial! I hope you enjoyed and this help you learn a thing or 2 about discord.js, or node in general. This is my first turtorial so if i messed up anything let me know!
