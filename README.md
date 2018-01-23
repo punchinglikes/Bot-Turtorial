@@ -22,7 +22,8 @@ You will need a few programs if you want to use this turtorial correctly.
 {
 	"token": "",
 	"prefix": ""
-}```
+}
+```
 Now, in the empty "" on the token line, add your bot token. You can find your bot token by going back to the discord developer page, find the token feild, click the click to reveal spot, and copy that whole token and paste it in the "" of the config.json file. this means that every time you refer to config.token (config as the json file name and token as that field within the file) it will display your token. so your token line should look like this: ``` "token": "6qi1NzExYLIJuTYUzhDQy.DUgCFg",``` (im not putting a real token in). now in then prefix side of things, in the quotes put whatever prefix you want it to be ```Ex. !```. Now you can close that and get to editing the index file (where the actual code will be).
 	
    # The Index.js file
